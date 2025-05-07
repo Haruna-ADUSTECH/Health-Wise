@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile Health Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mobile Health Monitor</h1>
+
+  <section id="heart-rate-section">
+    <p>Place your finger on the camera lens.</p>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" hidden></canvas>
+    <button onclick="startHeartRate()">Start Heart Rate</button>
+    <p>Estimated Heart Rate: <span id="hr">--</span> BPM</p>
+  </section>
+
+  <section id="motion-section">
+    <p>Place phone on chest to monitor breathing/motion</p>
+    <button onclick="startMotion()">Start Motion Monitor</button>
+    <p>Breath Movement Level: <span id="motionValue">--</span></p>
+  </section>
+
+  <script src="sensors.js"></script>
+</body>
+</html>
